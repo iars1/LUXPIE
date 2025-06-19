@@ -50,6 +50,14 @@
       background-color: var(--green);
       color: var(--white);
     }
+    .promo-banner {
+      background-color: var(--gold);
+      color: var(--white);
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+    }
     section {
       padding: 4rem 1.5rem;
       max-width: 900px;
@@ -70,6 +78,31 @@
     }
     .service p {
       color: var(--gray);
+    }
+    .testimonial-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 2rem;
+    }
+    .testimonial-carousel::-webkit-scrollbar {
+      height: 8px;
+    }
+    .testimonial-carousel::-webkit-scrollbar-thumb {
+      background-color: var(--gold);
+      border-radius: 10px;
+    }
+    .testimonial {
+      background-color: var(--mint);
+      border-left: 4px solid var(--gold);
+      padding: 1rem 1.5rem;
+      min-width: 300px;
+      scroll-snap-align: start;
+      font-style: italic;
+      color: var(--gray);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     footer {
       background-color: var(--mint);
@@ -93,6 +126,8 @@
   </style>
 </head>
 <body>
+  <div class="promo-banner">🎁 ¡Promoción de lanzamiento! Obtén 20% de descuento en tu primera cita 🦶</div>
+
   <header>
     <img src="logo-luxpie.png" alt="Logo LuxPie" width="120">
     <h1>LUXPIE CLINIC</h1>
@@ -102,7 +137,6 @@
 
   <section>
     <h2>Servicios de Podología</h2>
-
     <div class="service">
       <h3>Profilaxis podológica premium</h3>
       <p>Limpieza profunda + desinfección + hidratación avanzada.</p>
@@ -122,6 +156,16 @@
     <div class="service">
       <h3>Reflexología podal + masaje relajante</h3>
       <p>Masaje terapéutico para liberar tensiones y equilibrar tu energía.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Testimonios</h2>
+    <div class="testimonial-carousel">
+      <div class="testimonial">“Mi uña encarnada mejoró en una sola cita. ¡Gracias LUXPIE!” — Sofía L.</div>
+      <div class="testimonial">“Profesionales, puntuales y un lugar súper limpio. 10/10.” — Carlos M.</div>
+      <div class="testimonial">“Mi mamá es diabética y quedó feliz con la atención especializada.” — Ana C.</div>
+      <div class="testimonial">“Nunca pensé que un masaje en los pies me haría dormir tan bien. ¡Mil gracias!” — Javier T.</div>
     </div>
   </section>
 
@@ -149,4 +193,5 @@
   <a class="whatsapp" href="https://wa.link/luxpieclinic" target="_blank">📱</a>
 </body>
 </html>
+
 
