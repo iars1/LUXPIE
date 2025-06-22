@@ -60,7 +60,7 @@
     }
     section {
       padding: 4rem 1.5rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
     section h2 {
@@ -69,15 +69,34 @@
       margin-bottom: 2rem;
       text-align: center;
     }
-    .service {
-      margin-bottom: 2rem;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
-    .service h3 {
+    .service-card {
+      background-color: var(--mint);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .service-card h3 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
       color: var(--green);
-      font-size: 1.3rem;
     }
-    .service p {
+    .service-card p {
+      padding: 0 1rem 1rem;
       color: var(--gray);
+    }
+    .service-card .cta {
+      margin-bottom: 1rem;
     }
     .testimonial-carousel {
       display: flex;
@@ -136,26 +155,38 @@
   </header>
 
   <section>
-    <h2>Servicios de Podología</h2>
-    <div class="service">
-      <h3>Profilaxis podológica premium</h3>
-      <p>Limpieza profunda + desinfección + hidratación avanzada.</p>
-    </div>
-    <div class="service">
-      <h3>Tratamiento de uñas encarnadas</h3>
-      <p>Alivio inmediato del dolor y corrección profesional.</p>
-    </div>
-    <div class="service">
-      <h3>Reconstrucción de uñas</h3>
-      <p>Restaura la apariencia de uñas dañadas o deformes.</p>
-    </div>
-    <div class="service">
-      <h3>Podología para diabéticos</h3>
-      <p>Tratamiento especializado y seguro para tus pies.</p>
-    </div>
-    <div class="service">
-      <h3>Reflexología podal + masaje relajante</h3>
-      <p>Masaje terapéutico para liberar tensiones y equilibrar tu energía.</p>
+    <h2>Servicios destacados</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="img/profilaxis.jpg" alt="Profilaxis podológica">
+        <h3>Profilaxis podológica</h3>
+        <p>Limpieza profunda y fresado profesional para pies renovados.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/encarnadas.jpg" alt="Uñas encarnadas">
+        <h3>Uñas encarnadas</h3>
+        <p>Alivio inmediato del dolor y corrección estética.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/reconstruccion.jpg" alt="Reconstrucción de uñas">
+        <h3>Reconstrucción de uñas</h3>
+        <p>Recupera la forma y belleza con gel podológico o acrílico.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/diabeticos.jpg" alt="Podología para diabéticos">
+        <h3>Podología diabética</h3>
+        <p>Tratamiento seguro, revisión vascular y cuidado especial.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/reflexologia.jpg" alt="Reflexología podal">
+        <h3>Reflexología + Masaje</h3>
+        <p>Masaje profundo que alivia, relaja y mejora tu energía.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
     </div>
   </section>
 
@@ -193,5 +224,6 @@
   <a class="whatsapp" href="https://wa.link/luxpieclinic" target="_blank">📱</a>
 </body>
 </html>
+
 
 
