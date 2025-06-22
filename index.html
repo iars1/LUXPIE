@@ -123,24 +123,42 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
-    footer {
-      background-color: var(--mint);
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: var(--gray);
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      padding: 0.75rem;
-      font-size: 1.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    .product-card {
+      border: 1px solid #cde0d5;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    .product-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      color: #1A3C34;
+      margin-top: 1rem;
+    }
+    .product-card p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .product-card .cta {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #1A3C34;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
       text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -191,39 +209,63 @@
   </section>
 
   <section>
-    <h2>Testimonios</h2>
-    <div class="testimonial-carousel">
-      <div class="testimonial">“Mi uña encarnada mejoró en una sola cita. ¡Gracias LUXPIE!” — Sofía L.</div>
-      <div class="testimonial">“Profesionales, puntuales y un lugar súper limpio. 10/10.” — Carlos M.</div>
-      <div class="testimonial">“Mi mamá es diabética y quedó feliz con la atención especializada.” — Ana C.</div>
-      <div class="testimonial">“Nunca pensé que un masaje en los pies me haría dormir tan bien. ¡Mil gracias!” — Javier T.</div>
-    </div>
-  </section>
-
-  <section id="contacto" style="background-color: #F9F9F9; padding: 4rem 1.5rem; text-align: center;">
-    <h2>Contáctanos</h2>
-    <p>¿Tienes preguntas o deseas agendar una cita personalizada? Completa el formulario o visítanos directamente.</p>
-
-    <form action="mailto:luxpieclinic@gmail.com" method="POST" enctype="text/plain" style="max-width: 600px; margin: 2rem auto;">
-      <input type="text" name="Nombre" placeholder="Tu nombre" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px;">
-      <input type="email" name="Correo" placeholder="Tu correo electrónico" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px;">
-      <textarea name="Mensaje" placeholder="Escribe tu mensaje..." rows="5" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-      <button type="submit" style="background-color: var(--green); color: white; padding: 1rem 2rem; border: none; border-radius: 30px; font-weight: bold; cursor: pointer;">Enviar mensaje</button>
-    </form>
-
-    <div style="margin-top: 3rem;">
-      <iframe src="https://www.google.com/maps?q=Av.%20Alfredo%20Benavides%202130,%20Miraflores,%20Peru&output=embed" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+    <h2>Productos recomendados</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="img/producto1.jpg" alt="Producto 1">
+        <h3>Crema hidratante podal</h3>
+        <p>Nutre y regenera la piel seca y agrietada de los pies.</p>
+        <a class="cta" href="#">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto2.jpg" alt="Producto 2">
+        <h3>Talco antifúngico</h3>
+        <p>Previene la sudoración excesiva y elimina el mal olor.</p>
+        <a class="cta" href="#">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto3.jpg" alt="Producto 3">
+        <h3>Gel para uñas encarnadas</h3>
+        <p>Reduce la inflamación y alivia el dolor rápidamente.</p>
+        <a class="cta" href="#">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto4.jpg" alt="Producto 4">
+        <h3>Kit de lima profesional</h3>
+        <p>Ideal para el cuidado en casa con resultados de spa.</p>
+        <a class="cta" href="#">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto5.jpg" alt="Producto 5">
+        <h3>Mascarilla mineral relajante</h3>
+        <p>Desintoxica y suaviza la piel tras un largo día.</p>
+        <a class="cta" href="#">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto6.jpg" alt="Producto 6">
+        <h3>Spray desinfectante herbal</h3>
+        <p>Elimina bacterias y refresca los pies al instante.</p>
+        <a class="cta" href="#">Comprar ahora</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    © 2025 LUXPIE CLINIC — Todos los derechos reservados<br>
-    Av. Alfredo Benavides 2130, Miraflores
+    <p>© 2025 LUXPIE CLINIC — Todos los derechos reservados<br>
+    Av. Alfredo Benavides 2130, Miraflores</p>
+    <div style="margin-top: 1rem;">
+      <img src="img/visa.png" alt="Visa" style="height: 30px; margin: 0 10px;">
+      <img src="img/mastercard.png" alt="MasterCard" style="height: 30px; margin: 0 10px;">
+      <img src="img/paypal.png" alt="PayPal" style="height: 30px; margin: 0 10px;">
+    </div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.link/luxpieclinic" target="_blank">📱</a>
+  <a class="whatsapp" href="https://wa.link/luxpieclinic" target="_blank">
+    <img src="img/whatsapp-icon.png" alt="WhatsApp" style="width: 55px; height: 55px;">
+  </a>
 </body>
 </html>
+
 
 
 
