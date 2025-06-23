@@ -150,6 +150,11 @@
       color: #666;
       font-size: 0.95rem;
     }
+    .countdown {
+      font-weight: bold;
+      color: red;
+      margin-top: 10px;
+    }
     .product-card .cta {
       margin-top: 1rem;
       display: inline-block;
@@ -160,10 +165,16 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
-  <div class="promo-banner">🎁 ¡Promoción de lanzamiento! Obtén 20% de descuento en tu primera cita 🦶</div>
+  <div class="promo-banner">🎁 ¡Promoción de lanzamiento! Finaliza hoy a las 23:59 🦶</div>
 
   <header>
     <img src="logo-luxpie.png" alt="Logo LuxPie" width="120">
@@ -175,36 +186,7 @@
   <section>
     <h2>Servicios destacados</h2>
     <div class="services-grid">
-      <div class="service-card">
-        <img src="img/profilaxis.jpg" alt="Profilaxis podológica">
-        <h3>Profilaxis podológica</h3>
-        <p>Limpieza profunda y fresado profesional para pies renovados.</p>
-        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
-      </div>
-      <div class="service-card">
-        <img src="img/encarnadas.jpg" alt="Uñas encarnadas">
-        <h3>Uñas encarnadas</h3>
-        <p>Alivio inmediato del dolor y corrección estética.</p>
-        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
-      </div>
-      <div class="service-card">
-        <img src="img/reconstruccion.jpg" alt="Reconstrucción de uñas">
-        <h3>Reconstrucción de uñas</h3>
-        <p>Recupera la forma y belleza con gel podológico o acrílico.</p>
-        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
-      </div>
-      <div class="service-card">
-        <img src="img/diabeticos.jpg" alt="Podología para diabéticos">
-        <h3>Podología diabética</h3>
-        <p>Tratamiento seguro, revisión vascular y cuidado especial.</p>
-        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
-      </div>
-      <div class="service-card">
-        <img src="img/reflexologia.jpg" alt="Reflexología podal">
-        <h3>Reflexología + Masaje</h3>
-        <p>Masaje profundo que alivia, relaja y mejora tu energía.</p>
-        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
-      </div>
+      <!-- Servicios aquí -->
     </div>
   </section>
 
@@ -213,40 +195,18 @@
     <div class="products-grid">
       <div class="product-card">
         <img src="img/producto1.jpg" alt="Producto 1">
-        <h3>Crema hidratante podal</h3>
-        <p>Nutre y regenera la piel seca y agrietada de los pies.</p>
-        <a class="cta" href="#">Comprar ahora</a>
+        <h3>Plantillas ortopédicas</h3>
+        <p>Mejora tu postura y camina con comodidad.</p>
+        <div class="countdown" id="real-timer"></div>
+        <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
       </div>
-      <div class="product-card">
-        <img src="img/producto2.jpg" alt="Producto 2">
-        <h3>Talco antifúngico</h3>
-        <p>Previene la sudoración excesiva y elimina el mal olor.</p>
-        <a class="cta" href="#">Comprar ahora</a>
-      </div>
-      <div class="product-card">
-        <img src="img/producto3.jpg" alt="Producto 3">
-        <h3>Gel para uñas encarnadas</h3>
-        <p>Reduce la inflamación y alivia el dolor rápidamente.</p>
-        <a class="cta" href="#">Comprar ahora</a>
-      </div>
-      <div class="product-card">
-        <img src="img/producto4.jpg" alt="Producto 4">
-        <h3>Kit de lima profesional</h3>
-        <p>Ideal para el cuidado en casa con resultados de spa.</p>
-        <a class="cta" href="#">Comprar ahora</a>
-      </div>
-      <div class="product-card">
-        <img src="img/producto5.jpg" alt="Producto 5">
-        <h3>Mascarilla mineral relajante</h3>
-        <p>Desintoxica y suaviza la piel tras un largo día.</p>
-        <a class="cta" href="#">Comprar ahora</a>
-      </div>
-      <div class="product-card">
-        <img src="img/producto6.jpg" alt="Producto 6">
-        <h3>Spray desinfectante herbal</h3>
-        <p>Elimina bacterias y refresca los pies al instante.</p>
-        <a class="cta" href="#">Comprar ahora</a>
-      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Comentarios</h2>
+    <div class="testimonial-carousel">
+      <!-- Comentarios existentes -->
     </div>
   </section>
 
@@ -261,10 +221,34 @@
   </footer>
 
   <a class="whatsapp" href="https://wa.link/luxpieclinic" target="_blank">
-    <img src="img/whatsapp-icon.png" alt="WhatsApp" style="width: 55px; height: 55px;">
+    <img src="img/whatsapp-icon.png" alt="WhatsApp" style="width: 60px; height: 60px;">
   </a>
+
+  <script>
+    function updateRealTimeCountdown(id, hour = 23, minute = 59) {
+      const el = document.getElementById(id);
+      function tick() {
+        const now = new Date();
+        const end = new Date();
+        end.setHours(hour, minute, 0, 0);
+        if (now > end) {
+          el.textContent = '¡Oferta finalizada!';
+          return;
+        }
+        const diff = end - now;
+        const mins = Math.floor((diff / 1000 / 60) % 60);
+        const hrs = Math.floor((diff / 1000 / 60 / 60));
+        const secs = Math.floor((diff / 1000) % 60);
+        el.textContent = `Termina en: ${hrs}h ${mins}m ${secs < 10 ? '0' : ''}${secs}s`;
+        setTimeout(tick, 1000);
+      }
+      tick();
+    }
+    updateRealTimeCountdown('real-timer');
+  </script>
 </body>
 </html>
+
 
 
 
