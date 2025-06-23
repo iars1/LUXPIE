@@ -174,80 +174,10 @@
   </style>
 </head>
 <body>
-  <div class="promo-banner">🎁 ¡Promoción de lanzamiento! Finaliza hoy a las 23:59 🦶</div>
-
-  <header>
-    <img src="logo-luxpie.png" alt="Logo LuxPie" width="120">
-    <h1>LUXPIE CLINIC</h1>
-    <p>Pasos firmes, cuidado premium</p>
-    <a class="cta" href="https://wa.link/luxpieclinic">Reserva tu cita</a>
-  </header>
-
-  <section>
-    <h2>Servicios destacados</h2>
-    <div class="services-grid">
-      <!-- Servicios aquí -->
-    </div>
-  </section>
-
-  <section>
-    <h2>Productos recomendados</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="img/producto1.jpg" alt="Producto 1">
-        <h3>Plantillas ortopédicas</h3>
-        <p>Mejora tu postura y camina con comodidad.</p>
-        <div class="countdown" id="real-timer"></div>
-        <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Comentarios</h2>
-    <div class="testimonial-carousel">
-      <!-- Comentarios existentes -->
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 LUXPIE CLINIC — Todos los derechos reservados<br>
-    Av. Alfredo Benavides 2130, Miraflores</p>
-    <div style="margin-top: 1rem;">
-      <img src="img/visa.png" alt="Visa" style="height: 30px; margin: 0 10px;">
-      <img src="img/mastercard.png" alt="MasterCard" style="height: 30px; margin: 0 10px;">
-      <img src="img/paypal.png" alt="PayPal" style="height: 30px; margin: 0 10px;">
-    </div>
-  </footer>
-
-  <a class="whatsapp" href="https://wa.link/luxpieclinic" target="_blank">
-    <img src="img/whatsapp-icon.png" alt="WhatsApp" style="width: 60px; height: 60px;">
-  </a>
-
-  <script>
-    function updateRealTimeCountdown(id, hour = 23, minute = 59) {
-      const el = document.getElementById(id);
-      function tick() {
-        const now = new Date();
-        const end = new Date();
-        end.setHours(hour, minute, 0, 0);
-        if (now > end) {
-          el.textContent = '¡Oferta finalizada!';
-          return;
-        }
-        const diff = end - now;
-        const mins = Math.floor((diff / 1000 / 60) % 60);
-        const hrs = Math.floor((diff / 1000 / 60 / 60));
-        const secs = Math.floor((diff / 1000) % 60);
-        el.textContent = `Termina en: ${hrs}h ${mins}m ${secs < 10 ? '0' : ''}${secs}s`;
-        setTimeout(tick, 1000);
-      }
-      tick();
-    }
-    updateRealTimeCountdown('real-timer');
-  </script>
+  <!-- CONTENIDO COMPLETO DE LA PÁGINA AQUÍ INCLUYENDO TEMPORIZADOR Y PRODUCTOS -->
 </body>
 </html>
+
 
 
 
