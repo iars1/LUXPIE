@@ -174,7 +174,6 @@
 </head>
 <body>
   <div class="promo-banner">🎁 ¡Promoción de lanzamiento! Obtén 20% de descuento en tu primera cita 🦶</div>
-
   <header>
     <img src="logo-luxpie.png" alt="Logo LuxPie" width="120">
     <h1>LUXPIE CLINIC</h1>
@@ -186,15 +185,39 @@
     <h2>Servicios</h2>
     <div class="services-grid">
       <div class="service-card">
-        <img src="img/servicio1.jpg" alt="Servicio 1">
+        <img src="img/servicio1.jpg" alt="Profilaxis podológica">
         <h3>Profilaxis podológica</h3>
-        <p>Limpieza y fresado profesional para pies saludables.</p>
+        <p>Limpieza profunda para pies saludables.</p>
         <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
       </div>
       <div class="service-card">
-        <img src="img/servicio2.jpg" alt="Servicio 2">
+        <img src="img/servicio2.jpg" alt="Uñas encarnadas">
         <h3>Uñas encarnadas</h3>
-        <p>Tratamiento para dolor e inflamación en una sola sesión.</p>
+        <p>Tratamiento para dolor e inflamación.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/servicio3.jpg" alt="Reconstrucción de uñas">
+        <h3>Reconstrucción de uñas</h3>
+        <p>Gel o acrílico para uñas con hongos o dañadas.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/servicio4.jpg" alt="Reflexología">
+        <h3>Reflexología podal</h3>
+        <p>Masaje relajante que activa tus órganos internos.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/servicio5.jpg" alt="Masaje descontracturante">
+        <h3>Masaje descontracturante</h3>
+        <p>Alivio de tensión y estrés muscular.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/servicio6.jpg" alt="Podología para diabéticos">
+        <h3>Podología para diabéticos</h3>
+        <p>Cuidado especializado y revisión vascular segura.</p>
         <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
       </div>
     </div>
@@ -204,20 +227,47 @@
     <h2>Productos con Descuento</h2>
     <div class="products-grid">
       <div class="product-card">
-        <img src="img/producto1.jpg" alt="Producto 1">
+        <img src="img/producto1.jpg" alt="Plantillas Ortopédicas">
         <h3>Plantillas Ortopédicas</h3>
-        <p>Apoyo para arco plantar, ideal para largas caminatas.</p>
+        <p>Alivio para pies planos y caminatas largas.</p>
         <div class="countdown" id="timer1"></div>
         <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Testimonios</h2>
-    <div class="testimonial-carousel">
-      <div class="testimonial">“¡Excelente atención y resultados!” – María F.</div>
-      <div class="testimonial">“Volveré sin duda. ¡Gracias por el servicio!” – Luis M.</div>
+      <div class="product-card">
+        <img src="img/producto2.jpg" alt="Crema hidratante para pies">
+        <h3>Crema Hidratante</h3>
+        <p>Hidratación profunda y reparación de talones.</p>
+        <div class="countdown" id="timer2"></div>
+        <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto3.jpg" alt="Lima eléctrica profesional">
+        <h3>Lima eléctrica</h3>
+        <p>Para callos, durezas y acabado suave.</p>
+        <div class="countdown" id="timer3"></div>
+        <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto4.jpg" alt="Separadores de dedos">
+        <h3>Separadores de dedos</h3>
+        <p>Corrige alineación y evita rozaduras.</p>
+        <div class="countdown" id="timer4"></div>
+        <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto5.jpg" alt="Kit antiséptico podal">
+        <h3>Kit antiséptico</h3>
+        <p>Ideal para prevenir infecciones y mantener higiene.</p>
+        <div class="countdown" id="timer5"></div>
+        <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
+      </div>
+      <div class="product-card">
+        <img src="img/producto6.jpg" alt="Taloneras de silicona">
+        <h3>Taloneras de silicona</h3>
+        <p>Absorbe impacto y mejora postura al caminar.</p>
+        <div class="countdown" id="timer6"></div>
+        <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
+      </div>
     </div>
   </section>
 
@@ -236,7 +286,6 @@
   </a>
 
   <script>
-    // Temporizador simple de 24 horas
     function startCountdown(id) {
       const el = document.getElementById(id);
       let count = 86400;
@@ -249,10 +298,11 @@
         count--;
       }, 1000);
     }
-    startCountdown("timer1");
+    for (let i = 1; i <= 6; i++) startCountdown("timer" + i);
   </script>
 </body>
 </html>
+
 
 
 
