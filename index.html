@@ -95,22 +95,12 @@
       padding: 0 1rem 1rem;
       color: var(--gray);
     }
-    .service-card .cta {
-      margin-bottom: 1rem;
-    }
     .testimonial-carousel {
       display: flex;
       overflow-x: auto;
       gap: 1rem;
       scroll-snap-type: x mandatory;
       padding-bottom: 2rem;
-    }
-    .testimonial-carousel::-webkit-scrollbar {
-      height: 8px;
-    }
-    .testimonial-carousel::-webkit-scrollbar-thumb {
-      background-color: var(--gold);
-      border-radius: 10px;
     }
     .testimonial {
       background-color: var(--mint);
@@ -171,12 +161,99 @@
       right: 20px;
       z-index: 1000;
     }
+    .payment-logos {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .payment-logos img {
+      height: 30px;
+    }
   </style>
 </head>
 <body>
-  <!-- CONTENIDO COMPLETO DE LA PÁGINA AQUÍ INCLUYENDO TEMPORIZADOR Y PRODUCTOS -->
+  <div class="promo-banner">🎁 ¡Promoción de lanzamiento! Obtén 20% de descuento en tu primera cita 🦶</div>
+
+  <header>
+    <img src="logo-luxpie.png" alt="Logo LuxPie" width="120">
+    <h1>LUXPIE CLINIC</h1>
+    <p>Pasos firmes, cuidado premium</p>
+    <a class="cta" href="https://wa.link/luxpieclinic">Reserva tu cita</a>
+  </header>
+
+  <section>
+    <h2>Servicios</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="img/servicio1.jpg" alt="Servicio 1">
+        <h3>Profilaxis podológica</h3>
+        <p>Limpieza y fresado profesional para pies saludables.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+      <div class="service-card">
+        <img src="img/servicio2.jpg" alt="Servicio 2">
+        <h3>Uñas encarnadas</h3>
+        <p>Tratamiento para dolor e inflamación en una sola sesión.</p>
+        <a class="cta" href="https://wa.link/luxpieclinic">Reservar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Productos con Descuento</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="img/producto1.jpg" alt="Producto 1">
+        <h3>Plantillas Ortopédicas</h3>
+        <p>Apoyo para arco plantar, ideal para largas caminatas.</p>
+        <div class="countdown" id="timer1"></div>
+        <a class="cta" href="https://wa.link/luxpieclinic">Comprar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Testimonios</h2>
+    <div class="testimonial-carousel">
+      <div class="testimonial">“¡Excelente atención y resultados!” – María F.</div>
+      <div class="testimonial">“Volveré sin duda. ¡Gracias por el servicio!” – Luis M.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 LUXPIE CLINIC — Todos los derechos reservados<br>
+    Av. Alfredo Benavides 2130, Miraflores</p>
+    <div class="payment-logos">
+      <img src="img/visa.png" alt="Visa">
+      <img src="img/mastercard.png" alt="Mastercard">
+      <img src="img/paypal.png" alt="Paypal">
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.link/luxpieclinic" target="_blank">
+    <img src="img/whatsapp-icon.png" alt="WhatsApp" width="50">
+  </a>
+
+  <script>
+    // Temporizador simple de 24 horas
+    function startCountdown(id) {
+      const el = document.getElementById(id);
+      let count = 86400;
+      const interval = setInterval(() => {
+        const hours = Math.floor(count / 3600);
+        const minutes = Math.floor((count % 3600) / 60);
+        const seconds = count % 60;
+        el.textContent = `Oferta termina en: ${hours}h ${minutes}m ${seconds}s`;
+        if (count <= 0) clearInterval(interval);
+        count--;
+      }, 1000);
+    }
+    startCountdown("timer1");
+  </script>
 </body>
 </html>
+
 
 
 
